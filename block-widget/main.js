@@ -10,10 +10,11 @@ import {
 	Paragraph
 } from 'ckeditor5';
 import 'ckeditor5/ckeditor5.css';
+import SimpleBox from "./simplebox/simplebox.js";
 
 ClassicEditor
 	.create( document.querySelector( '#editor' ), {
-		plugins: [ Essentials, Paragraph, Heading, List, Bold, Italic ],
+		plugins: [ Essentials, Paragraph, Heading, List, Bold, Italic, SimpleBox ],
 		toolbar: [ 'heading', 'bold', 'italic', 'numberedList', 'bulletedList' ],
 		licenseKey: 'GPL'
 	} )
