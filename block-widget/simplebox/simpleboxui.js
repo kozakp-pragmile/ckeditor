@@ -1,4 +1,5 @@
-import {ButtonView, Plugin} from 'ckeditor5';
+import {ButtonView, Plugin, IconObjectFullWidth} from 'ckeditor5';
+
 
 export default class SimpleBoxUI extends Plugin {
   init() {
@@ -20,7 +21,8 @@ export default class SimpleBoxUI extends Plugin {
         // The t() function helps localize the editor. All strings enclosed in t() can be
         // translated and change when the language of the editor changes.
         label: t( 'Simple Box' ),
-        withText: true,
+        withText: false,
+        icon: IconObjectFullWidth,
         tooltip: true
       } );
 

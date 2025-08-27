@@ -9,7 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "ckeditor5": "latest"
+    "@ckeditor/ckeditor5-icons": "^46.0.2",
+    "ckeditor5": "latest",
+    "package": "^1.0.1"
   },
   "devDependencies": {
     "@ckeditor/ckeditor5-inspector": "^5.0.0",
