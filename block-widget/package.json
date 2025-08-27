@@ -12,6 +12,7 @@
     "ckeditor5": "latest"
   },
   "devDependencies": {
+    "@ckeditor/ckeditor5-inspector": "^5.0.0",
     "vite": "^5.2.0"
   },
   "author": "CKSource (https://cksource.com/)",
