@@ -5,6 +5,7 @@ export default class SimpleBoxEditing extends Plugin {
     console.log('SimpleBoxEditing#init() got called');
 
     this._defineSchema();
+    this._defineConverters();
   }
 
   _defineSchema() {
@@ -34,6 +35,34 @@ export default class SimpleBoxEditing extends Plugin {
 
       // Allow content which is allowed in the root (e.g. paragraphs).
       allowContentOf: '$root'
+    });
+  }
+
+  _defineConverters() {
+    const conversion = this.editor.conversion;
+
+    conversion.elementToElement({
+      model: 'simpleBox',
+      view: {
+        name: 'section',
+        classes: 'simple-box'
+      }
+    });
+
+    conversion.elementToElement({
+      model: 'simpleBoxTitle',
+      view: {
+        name: 'h1',
+        classes: 'simple-box-title'
+      }
+    });
+
+    conversion.elementToElement({
+      model: 'simpleBoxDescription',
+      view: {
+        name: 'div',
+        classes: 'simple-box-description'
+      }
     });
   }
 }
