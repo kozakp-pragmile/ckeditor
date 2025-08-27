@@ -1,4 +1,5 @@
 import {Plugin, toWidget, toWidgetEditable, Widget} from 'ckeditor5';
+import InsertSimpleBoxCommand from "./insertsimpleboxcommand.js";
 
 export default class SimpleBoxEditing extends Plugin {
   static get requires() {
@@ -10,6 +11,8 @@ export default class SimpleBoxEditing extends Plugin {
 
     this._defineSchema();
     this._defineConverters();
+
+    this.editor.commands.add( 'insertSimpleBox', new InsertSimpleBoxCommand( this.editor ) );
   }
 
   _defineSchema() {

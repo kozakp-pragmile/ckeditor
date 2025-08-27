@@ -24,6 +24,7 @@ ClassicEditor
     CKEditorInspector.attach({'editor': editor});
     // Expose for playing in the console.
     window.editor = editor;
+    editor.execute( 'insertSimpleBox' );
   })
   .catch(error => {
     console.error(error.stack);
