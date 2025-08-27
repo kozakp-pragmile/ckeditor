@@ -16,7 +16,7 @@ import CKEditorInspector from '@ckeditor/ckeditor5-inspector';
 ClassicEditor
   .create(document.querySelector('#editor'), {
     plugins: [Essentials, Paragraph, Heading, List, Bold, Italic, SimpleBox],
-    toolbar: ['heading', 'bold', 'italic', 'numberedList', 'bulletedList'],
+    toolbar: ['heading', 'bold', 'italic', 'numberedList', 'bulletedList', 'simpleBox'],
     licenseKey: 'GPL'
   })
   .then(editor => {
